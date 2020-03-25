@@ -1,0 +1,42 @@
+@import "./styles/fonts";
+@import "./styles/variables";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+@import "./styles/twinkleAnimationStyles.scss";
+
+/* ============== custom grid ============= */
+.row {
+  display: flex;
+  justify-content: flex-start;
+}
+.w-50 {
+  width: 50%;
+}
+/* position css */
+.position-relative {
+  position: relative !important;
+}
+
+
+/* =========== app styles =========== */
+body {
+  @extend .font-lato-regular;
+}
+.app-background {
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+/* ======== fonts ============ */
+.font-lato-regular {
+  font-family: "Lato", sans-serif !important;
+  font-weight: 400;
+}
+.font-lato-light {
+  font-family: "Lato", sans-serif !important;
+  font-weight: 300;
+}

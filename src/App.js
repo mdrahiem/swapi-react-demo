@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import Header from './components/common/header';
+import PickSpecieForm from './components/pickSpecieForm';
+import ChartComponent from './components/chartComponent';
+import './app.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  componentDidMount() {
+    this.props.fetchSpecies();
+  }
+
+  render() {
+    return (
+      <Fragment>
+        {/* background aniimation */}
+        <div className="stars"></div>
+        <div className="twinkling"></div>
+
+        <div className="app-background">
+          <Header />
+          <PickSpecieForm
+            species={this.props.species}
+            doFetchPeople={this.props.fetchPeople}
+            speciesLoading={this.props.speciesLoading}
+          />
+          <ChartComponent
+            chartData={this.props.people}
+            peopleLoading={this.props.peopleLoading}
+          />
+        </div>
+      </Fragment>
+    );
+  }
 }
 
 export default App;
