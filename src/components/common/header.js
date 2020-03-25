@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './header.module.scss';
 import logo from '../../assets/img/logo.svg';
 
-function Header() {
+const Header = () => {
   return (
     <header className={styles['app-header']}>
       <div className="app-logo">
