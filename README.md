@@ -1,6 +1,13 @@
 This project was created using [Create React App](https://github.com/facebook/create-react-app) and [swapi starwars api](https://swapi.co/). For designing the layout
 I have used [Photopea](https://www.photopea.com/), Icons credit goes to [FlatIcon](https://www.flaticon.com/), Fonts have been used from [Fonts2u.com](Fonts2u.com) & [google fonts](https://fonts.google.com/).
 
+## libraries & fonts used
+1. create-react-app
+2. react-select
+3. recharts
+4. redux (state management)
+5. axios
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -21,13 +28,6 @@ on the blue dot user could see Name & Gender. I am using Promise.all to call all
 apis and then displaying the graph. Meanwhile I am also showing a loader until people
 data is loaded completely. If for any people Mass or Height is 'unknown' or undefined,
 I am not showing that people's data in the graph. In this case I am showing 'There is only pokemon here' text.
-
-## libraries & fonts used
-1. create-react-app
-2. react-select
-3. recharts
-4. redux (state management)
-5. axios
 
 ### `yarn build`
 
